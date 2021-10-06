@@ -7,6 +7,10 @@ import tart.PreLaunchState
 
 class MyApp : Application() {
 
+    init {
+        System.loadLibrary("stress")
+    }
+
     override fun onCreate() {
         super.onCreate()
         AppLaunch.onAppLaunchListeners += { appLaunch ->

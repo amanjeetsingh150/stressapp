@@ -3,10 +3,10 @@
     package="me.amanjeet.stressapp">
 
     <application
+        android:name=".MyApp"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:name=".MyApp"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Stressapp">
@@ -17,6 +17,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <receiver
+            android:name=".NativeAllocationReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="me.amanjeet.stressapp.ALLOCATE_NATIVE" />
+            </intent-filter>
+        </receiver>
     </application>
 
 </manifest>

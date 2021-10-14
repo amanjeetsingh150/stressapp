@@ -9,7 +9,7 @@ class NativeAllocationReceiver: BroadcastReceiver() {
     private external fun allocateMemory(numberOfObjects: Int)
 
     companion object {
-        private const val KEY_NUMBER_OF_OBJECTS = "KEY_NUMBER_OF_OBJECTS"
+        private const val KEY_NUMBER_OF_OBJECTS = "NUMBER_OF_OBJECTS"
     }
 
     override fun onReceive(context: Context, intent: Intent) {

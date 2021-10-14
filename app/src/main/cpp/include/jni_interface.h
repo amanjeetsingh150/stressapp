@@ -1,5 +1,4 @@
 #include <jni.h>
-#include <jni.h>
 
 #ifndef STRESSAPP_JNI_INTERFACE_H
 #define STRESSAPP_JNI_INTERFACE_H

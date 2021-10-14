@@ -10,7 +10,7 @@ public:
 };
 
 extern "C"
-JNIEXPORT void JNICALL
+JNIEXPORT jint JNICALL
 Java_me_amanjeet_stressapp_NativeAllocationReceiver_allocateMemory(
         JNIEnv *env,
         jobject thiz,
@@ -28,4 +28,5 @@ Java_me_amanjeet_stressapp_NativeAllocationReceiver_allocateMemory(
     after = mallinfo();
     mused = after.uordblks - before.uordblks;
     __android_log_print(ANDROID_LOG_DEBUG, MODULE_NAME, "%d bytes allocated", mused);
+    return mused;
 }

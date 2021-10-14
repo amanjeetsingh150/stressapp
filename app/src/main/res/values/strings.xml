@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">stressapp</string>
+    <string name="instruction">No allocations, please create allocation via ADB command or from `allocate_native.sh`</string>
 </resources>

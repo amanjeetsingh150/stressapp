@@ -5,7 +5,7 @@
 
 
 extern "C"
-JNIEXPORT void JNICALL
+JNIEXPORT jint JNICALL
 Java_me_amanjeet_stressapp_NativeAllocationReceiver_allocateMemory(
         JNIEnv *env,
         jobject thiz,

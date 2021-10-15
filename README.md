@@ -15,6 +15,6 @@ Details of other options are here in [documentation](https://android.googlesourc
 ## Effect on device during stress-test
 
 <p align="center">
-<img src=https://user-images.githubusercontent.com/12881364/137557263-efe78254-417c-427d-a23e-9f961881506c.gif  width="40%" height="800px"/>
+<img src=https://user-images.githubusercontent.com/12881364/137557263-efe78254-417c-427d-a23e-9f961881506c.gif  width="40%" height="60%"/>
 </p>
 

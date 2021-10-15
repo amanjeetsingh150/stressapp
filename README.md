@@ -12,4 +12,9 @@ adb shell /data/local/tmp/stressapptest -s 20 -M 990 -C 8
 -s for total time you want to run memory stress, -M for megabytes of ram to test, -C for total threads to be used for stressing memory, defaults to number of CPUs.
 Details of other options are here in [documentation](https://android.googlesource.com/platform/external/stressapptest/).
 
+## Effect on device during stress-test
+
+<p align="center">
+<img src=https://user-images.githubusercontent.com/12881364/137557263-efe78254-417c-427d-a23e-9f961881506c.gif  width="40%" height="800px"/>
+</p>
 

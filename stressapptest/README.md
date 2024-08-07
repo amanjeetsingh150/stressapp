@@ -6,7 +6,37 @@ It tries to maximize randomized traffic to memory from processor and I/O, with t
 
 Discussion group: https://groups.google.com/d/forum/stressapptest-discuss
 
+## Build
+```
+Populate and commit a container with the NDK:
 
+$ docker run –name my-populated-ndk -v $HOME:$HOME -w $PWD bitriseio/android-ndk ./gradlew build
+$ docker commit my-populated-ndk bitriseio/android-ndk:populated
+
+Build with it
+
+$ docker run --rm -v $HOME:$HOME -w $PWD -it --entrypoint /bin/bash bitriseio/android-ndk:populated
+# cd stressapptest
+# ndk-build
+.
+.
+[x86_64] Compile++      : stressapptest <= sat_factory.cc
+[x86_64] Compile++      : stressapptest <= worker.cc
+[x86_64] Executable     : stressapptest
+[x86_64] Install        : stressapptest => libs/x86_64/stressapptest
+# exit
+
+Copy it into your emulator container and run it:
+
+$ docker cp libs/x86_64/stressapptest emulator-container:/
+$ docker-enter emulator-container
+# adb push /stressapptest  /data/local/tmp/
+# adb shell
+% /data/local/tmp/stressapptest                                                                                                                                                                                                                                
+2024/06/14-20:35:12(BST) Log: Commandline - /data/local/tmp/stressapptest
+2024/06/14-20:35:12(BST) Stats: SAT revision 1.0.4_autoconf, 64 bit binary
+2024/06/14-20:35:12(BST) Log: Android version from open source release
+```
 ## Usage
 
 To execute, a typical command would be:
